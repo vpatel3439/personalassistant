@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Personal Assistant</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+    <!--[if lt IE 9]>
+        <script src=" http://html5shim.googlecode.com/svn/trunk/html5.js ">
+        </script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <header>
+                <a href="index.html"> <h1>Personal Assistant</h1></a>
+            </header>
+            <nav>
+                <ul>
+                    <a href="index.html">Home</a>
+                    <a href="#list-container">Task List</a>
+                    <a href="#appointment-container">Appointments</a>
+                    <a href="#shopping-container">Shopping List</a>
+                    <a href="#quote-container">Read a Quote</a>
+                    <a href="#joke-container">A Joke, Maybe?</a>
+                </ul>
+            </nav>
+        </div>
+        <main>
+            <div class="box">
+                <div id="list-container">
+                    <h2>Add a Task</h2>
+                    <div id="task">
+                        <div id="tasktitle">
+                            <div class="addIcon"></div>
+                            <input id="addInput-title" placeholder="Add Title" type="text" required>
+                        </div>
+                        <div id="tasknotes">
+                            <div class="addIcon"></div>
+                            <input id="addInput-notes" placeholder="Add Note" type="text">
+                        </div>
+                        <div id="eventdate">
+                            <div class="addIcon"></div>
+                            <input id="addInput-date" placeholder="Add Date" type="date" required>
+                        </div>
+                        <div id="eventtime">
+                             <div class="addIcon"></div>
+                            <input id="addInput-time-hours" placeholder="Add Hours" type="number" required>
+                            <input id="addInput-time-mins" placeholder="Add Mins" type="number" required>
+                            <select id="ampm" placeholder="Select">
+                                <option value="AM" selected>AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="createTask">Add New Task</button>
+                </div>
+                <div id="tasklist">
+                    <h2>Task List</h2>
+                    <div id="displayTask"></div>
+                    <button id="clearTask">Clear Task</button>
+                </div>
+                <div><a href="#container">Back to Top</a></div>
+                <div id="displayErrorsTask"></div>
+
+            </div>
+            <div class="box">
+                <div id="appointment-container">
+                    <h2>New Appointment</h2>
+                    <div id="appointment">
+                        <div id="appointmentdate">
+                            <div class="addIcon"></div>
+                            <input id="addInput-appointmentdate" placeholder="Date" type="date" required>
+                        </div>
+                        <div id="appointmentnotes">
+                            <div class="addIcon"></div>
+                            <input id="addInput-appointmentnotes" placeholder="Add Note" type="text">
+                        </div>
+                        <div id="appointmentstarttime">
+                            <div class="addIcon"></div>
+                            <input id="addInput-starttime-hours" placeholder="Add Hours" type="number" required>
+                            <input id="addInput-starttime-mins" placeholder="Add Mins" type="number" required>
+                            <select id="starttime-ampm" placeholder="Select">
+                                <option value="AM" selected>AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </div>
+                        <div id="appointmentendtime">
+                            <div class="addIcon"></div>
+                            <input id="addInput-endtime-hours" placeholder="Add Hours" type="number" required>
+                            <input id="addInput-endtime-mins" placeholder="Add Mins" type="number" required>
+                            <select id="endtime-ampm" placeholder="Select">
+                                <option value="AM" selected>AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="createappointment">Make Appointment</button>
+                </div>
+                <div id="appointmentlist">
+                    <h2>Appointments</h2>
+                    <div id="displayAppointments">
+                        <table id="appointment-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Start time</th>
+                                    <th>End time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="appointmentInput">
+                            </tbody>
+                    </table>
+                    </div>
+                    <button id="clearappointment">Clear Appointment</button>
+                </div>
+                <div><a href="#container">Back to Top</a></div>
+                <div id="displayErrors"></div>
+            </div>
+            <div class="box">
+                <div id="shopping-container">
+                    <h2>Add Items</h2>
+                    <div id="shopping">
+                        <div id="itemCategory">
+                            <div class="addIcon"></div>
+                            <select id="category" placeholder="Select Item Category">
+                                <option value="Dairy" selected>Dairy</option>
+                                <option value="Spices">Spices</option>
+                                <option value="Vegetables">Vegetables</option>
+                                <option value="Fruits">Fruits</option>
+                                <option value="Pantry">Pantry</option>
+                                <option value="Clothes">Clothes</option>
+                                <option value="Home Decor">Home Decor</option>
+                            </select>
+                        </div>
+                        <div id="itemName">
+                            <div class="addIcon"></div>
+                            <input id="addInput-itemName" placeholder="Add Item Name" type="text">
+                        </div>
+                        <div id="itemInstructions">
+                            <div class="addIcon"></div>
+                            <input id="addInput-itemInstructions" placeholder="Special Instructions" type="text" required>
+                        </div>
+                    </div>
+                    <button id="additem">Add new item</button>
+                </div>
+                <div id="shoppinglist">
+                    <h2>Shopping List</h2>
+                    <div id="displayShoppinglist"></div>
+                    <button id="removeitem">Remove Items</button>
+                </div>
+                <div><a href="#container">Back to Top</a></div>
+                <div id="displayErrorsShoppingList"></div>
+            </div>
+            <div class="box-full">
+                <div id="quote-container">
+                    <button id="quoteBtn">Read A Quote.</button>
+                    <br>
+                </div>
+                <div id="displayQuote"></div>
+                <div><a href="#container">Back to Top</a></div>
+            </div>
+            <div class="box-full">
+                <div id="joke-container">
+                    <button id="jokeBtn">Want to listen a Joke?</button>
+                    <br>
+                    </div>
+                <div id="displayJoke"></div>
+                <div><a href="#container">Back to Top</a></div>
+            </div>
+        </main>
+
+        <footer class="disp-in">
+            <hr>
+            <p>Copyright &copy; 2020 Personal Assistant</p>
+            <p>Privacy Policy</p>
+            <p>Terms and Conditions</p>
+            <div class="follow-us">
+            <img src="images/icons8-facebook-100.png" alt="facebook page">
+            <img src="images/icons8-instagram-100.png" alt="instagram page">
+            <img src="images/icons8-twitter-100.png" alt="twitter page">
+            <img src="images/icons8-youtube-squared-100.png" alt="youtube page">
+            </div>
+        </footer>
+    </div>
+    <script src="js/widget-script.js"></script>
+</body>
+
+</html>

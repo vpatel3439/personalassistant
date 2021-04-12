@@ -1,0 +1,233 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Merriweather',sans-serif;
+    background-color: #FAF3E3;
+    color: #49245A;
+}
+
+#wrapper {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    background-image: url(../images/Logo.png);
+    background-repeat: no-repeat;
+    background-size: 8em;
+    height:9em;
+}
+
+h1 {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#container {
+    display: inline-flex;    
+    align-items: center; 
+    width: 100%;
+    justify-content: space-between;
+	flex-wrap: wrap;
+}
+nav {
+    font-weight: bold;
+}
+
+nav li {
+    display: inline;
+    margin-right: 2vw;
+}
+nav a {
+    text-decoration: none;
+    padding: 0.5vw;
+    color: #49245A;
+}
+
+nav ul {
+    font-size: 1.25em;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a:hover {
+    background-color: #49245A;
+    color:#FAF3E3;
+}
+
+button {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+.addIcon {
+    background-image: url(../images/icons8-plus-96.png);
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    height: 1.5em;
+    width: 1.5em;   
+}
+
+.box {
+    margin: 2em;
+    background-color: white;
+    border: 2vw solid white;
+    border-radius: 1vw;
+    box-shadow: 10px 5px 5px lightgray;
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+}
+.box-full {
+    margin: 2em;
+    background-color: white;
+    border: 2vw solid white;
+    border-radius: 1vw;
+    box-shadow: 10px 5px 5px lightgray;  
+}
+
+#eventdate,#tasktitle, #tasknotes,#appointmentnotes, #appointmentdate,#itemCategory,#itemName, #itemInstructions {
+    margin: 0.2em 1em;
+    display:grid;
+    grid-template-columns: 0.5fr 10fr;
+    grid-gap: 0.2em;
+}
+#eventtime {
+    margin: 0.2em 1em;
+    display: grid;
+    grid-template-columns: 0.5fr 9fr 1fr;
+    grid-gap: 0.2em;
+}
+#appointmentendtime,#appointmentstarttime,#eventtime {
+    margin: 0.2em 1em;
+    display: grid;
+    grid-template-columns: 0.5fr 4.5fr 4.5fr 1fr;
+    grid-gap: 0.2em;
+}
+#displayTask {
+    margin:1em;
+}
+#displayAppointments {
+    margin:1em;
+}
+
+#appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#appointment-table th{
+    width :5em;
+    color:white;
+    background-color: black;
+    padding: 1em;
+    border: 1px solid white;
+}
+
+#appointment-table td{
+    font-size: 1vw;
+    color: black;
+    padding: 1em;
+    border: 1px solid black;
+}
+#appointmentInput {
+    font-size:1vw;
+}
+#displayErrors , #displayErrorsTask , #displayErrorsShoppingList {
+    color:#B30000;
+    font-weight: bold;
+}
+
+#createTask, #clearTask,#clearappointment,#createappointment,#additem,#removeitem {
+    background-color: black;
+    color:#FAF3E3;
+    border-radius: 1vw;
+    padding: 1em;
+    margin: 1em;
+}
+#quote-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#quoteBtn {
+    padding: 1em;
+    border-radius: 2vw;
+    font-size: 1em;
+    background-color: #571845;
+    color:white;
+}
+#joke-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#jokeBtn {
+    padding: 1em;
+    border-radius: 2vw;
+    font-size: 1em;
+    background-color: #173F5F;
+    color:white;
+}
+footer {
+    text-align: center;
+    margin-bottom: 2vw;
+    padding: 1vw;
+    color: black;
+}
+footer a {
+    text-decoration: none;
+    font-size: 1em;
+    color: black;
+}
+.disp-in p, .disp-in a {
+    display: inline;
+    margin-left: 2vw;
+}
+.follow-us img {
+    width: 4vw;
+    height: auto;
+}
+#gallery {
+    height: 26vw;
+    width: 40vw;
+    border-radius: 1vw;
+}
+
+#img-container {
+    width: 40vw;
+    height: 26vw;
+    border-radius: 1vw;
+    margin-right: 2vw;
+}
+
+#heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color:#5a2924;
+}
+.box-column {
+    margin: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vw;
+}
+
+.box-column div {
+    color: white;
+    background-color: #5a2924;
+    border-radius: 1vw;
+    padding: 1.5vw;
+}
+time {
+    float: right;
+}
+.tsknote {
+    font-size: 1.1em;
+}
+
+#displayQuote, #displayJoke {
+    text-align: center;
+    padding: 1em;
+}
